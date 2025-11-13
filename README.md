@@ -1,4 +1,4 @@
-# 🫁 Lung Cancer Detection Project
+# 🫁 Lung Cancer Detection using Machine Learning
 
 > A comprehensive machine learning project for early lung cancer detection using medical imaging and the LIDC-IDRI dataset.
 
