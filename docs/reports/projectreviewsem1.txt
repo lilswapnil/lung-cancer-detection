@@ -1,0 +1,75 @@
+Now, let's dicuss the WorkFlow of our System.
+1. At first the system downloads the data set \\from kaggle.
+2. Which is then loaded into Python.
+3. Now Create a Panads dataframe. 
+	\\Panadas DataFrame is two dimenstional dta structure like 2D array or table with rows and columns.
+4. After which mapping of the annotations to image filenames is done.
+5. Then Extract the images.
+6. Now, the understanding of the 3D image data is done and the it is visualized,
+   meanwhile the Segmenting of the lungs and cancer happens and the segmented image is saved in .npy file.
+	\\.npy file is NumPy library file. NumPy is a python library taht supports large, multidientional array and matrices.
+7. These segemnted images are uploaded to FloydHub
+	\\FloydHub is a Deep Learning platform for productive data science teams.
+8.Now training of the U-NEt model is done.
+	\\U-Net is a convolutional neural network architecture that expanded with few changes in the CNN architecture.
+9. Then Evautae the model.
+10. Save thsi model with the format of .hdf5.
+	\\HDF5 (Hierarchical Data Format is set of file formats designed to store and organize large amounts of data.)
+11.Finally download the model from FloydHub.
+_________________________________________________________________________________________________________________________________
+
+Activity Diagram
+Let's see how the system works with the User.
+1. Initially, the user need to login/signup to the system.
+2. After with he/she put in the input (lungs images).
+3. This is when the images are put into the sytem for performing analytics on it, along with the test cases.
+4. The System make the final decisions on the report generated, and then made it availabe to the end user.
+5. Finally, log out.
+
+_______________________________________________________________________________________________________________________________
+
+Now, Class Diagram represemtation of our system.
+Only Two classes interacting here.
+1. The User:
+   Each user has it's own username and password.
+   Only fuction User perform are give input and view the report generated.
+2. System:
+   attributes will be same as the user.
+   the functions performed are machine learning (i.e. actual module), test case, analysis and send reports.
+_______________________________________________________________________________________________________________________________
+
+Sequence Diagram:
+1. Image Data Accquisation: the image data is learned and understood by the system.
+2. Image Enhancement: the image is enhanced for more accurate prediction.
+3. Temple Window Selection: here K means and fuzzy c means segementation is done.
+	//K-Means just needs to do a distance calulation, whereas fuzzy c means needs to d full inverse-distance weighting.
+4. Accuracy Specificity Sensitivity: Only if Cancer chances are incurred.
+ 
+________________________________________________________________________________________________________________________________
+
+Use Case Diagram:
+1. So the actor here is the patient, who is connected to our system //through a UI.
+2. Contributes into the database with his/hers images.
+3. The data from the database is sent put into R Tool and HIVE
+	//Apache Hive is data warehouse software project built on top of Apache Hadoop providing data query and analysis.
+4. ALong with the machine lerning algorithm and admin works to build result.
+
+_________________________________________________________________________________________________
+ 
+Advantages: 
+a) Early detection of cancer is beneficial in fighting against it.
+b) With help of our system, the treament is simpler and more accurate.
+c) As a computerised system is working on detection of cancer it is more accure and efficient.
+
+__________________________________________________________________________________________________
+
+Future Cope:
+A computerized machine for lung cancer detection is efficient. Observing alot of CT scan image will be hassle of work for a doctor.
+This system eliminated risk of errors and is fast.
+
+___________________________________________________________________________________________________
+
+Expected Outcomes:
+Accuracy of the system is determined by the dice coefficent on the data set
+	//dice coefficent: 2* area of overlap divided by the total number of pixels in both images.
+The model is great at distinguishing difference between the cancer and nn-cancer modules comapred.
