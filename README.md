@@ -37,6 +37,19 @@ This project implements a machine learning pipeline for lung cancer detection us
 - 📈 **Performance Metrics**: Detailed evaluation metrics including sensitivity, specificity, and AUC
 - 🎨 **Visualization Tools**: Interactive plots and medical image visualization capabilities
 
+## 🎬 Sample Results
+
+<p align="center">
+   <img src="assets/output1.png" alt="Histogram of Hounsfield Units (HU) for a CT scan" width="800">
+   <br/>
+   <em>Figure 1: Histogram of Hounsfield Units (HU) for a CT scan of a patient. This plot visualizes the distribution of pixel intensities in the CT image, which is important for understanding tissue characteristics and preprocessing.</em>
+</p>
+<p align="center">
+   <img src="assets/output2.png" alt="Model prediction and ground truth mask visualization" width="800">
+   <br/>
+   <em>Figure 2: Example of model prediction versus ground truth mask on a test CT slice. The figure shows the predicted segmentation mask, the ground truth mask, and the original CT image for visual comparison of model performance.</em>
+</p>
+
 ## 📊 Dataset
 
 ### LIDC-IDRI Dataset
